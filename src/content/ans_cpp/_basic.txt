@@ -1,6 +1,6 @@
 ---
 title: ""
-date: 2026-01-01
+date: 2026-01-22
 tags: []
 ---
 
@@ -13,13 +13,5 @@ tags: []
 評分結果(參考) ： **<font color="#00bb00">AC</font> **
 
 ```cpp
-#include <bits/stdc++.h>
-using namespace std;
 
-int main(){
-    ios::sync_with_stdio(false);
-    cin.tie(nullptr);
-    
-    return 0;
-}
 ```

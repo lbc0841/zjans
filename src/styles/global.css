@@ -23,7 +23,7 @@
 
     --content-color: #f1f5f9;
 
-    background: #080808;
+    background: #0a0a0a;
     overflow: hidden;
     height: 100dvh;
     width: 100dvw;
@@ -44,7 +44,7 @@
 body {
     position: fixed;
     font-family: Arial, sans-serif;
-    background: #080808;
+    background: #0a0a0a;
 
     color: var(--content-color);
 
@@ -55,6 +55,22 @@ body {
     overflow: hidden;
 }
 
+.background-grid {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    z-index: -1;
+
+    background-image: 
+        linear-gradient(0deg, rgba(255, 255, 255, 0.1) 1px, rgba(0, 0, 0, 0) 1px), 
+        linear-gradient(90deg, rgba(255, 255, 255, 0.1) 1px, rgba(0, 0, 0, 0) 1px);
+
+    background-size: 60px 60px;
+}
+
+/* ------ font ------ */
 .font-share-tech-mono {
     font-family: 'Share Tech Mono', monospace;
 }

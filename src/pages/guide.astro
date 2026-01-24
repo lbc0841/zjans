@@ -5,8 +5,85 @@ import Layout from '../layouts/Layout.astro';
 
 <Layout>
 	<MainNavigation />
+	<div class="background-grid"></div>
 
 	<div class="w-full h-full pt-12 overflow-y-auto overflow-x-hidden">
-		施工中...
+		<div class="max-w-200 mx-auto px-8 text-zinc-300 pb-16">
+
+			<h1 class="text-4xl text-center px-2 text-zinc-200 mt-10">ZeroJudge 食用教學</h1>
+
+			<h2 class="text-3xl px-2 text-zinc-200 mt-16"># 如何使用</h2>
+			<hr class="scale-x-110 text-zinc-700 my-4">
+
+			<h2 class="text-3xl px-2 text-zinc-200 mt-16"># 評分結果</h2>
+			<hr class="scale-x-110 text-zinc-700 my-4">
+
+			<div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+				<div>
+					<p><span class="text-blue-400/80 font-bold">AC</span> (Accept):</p>
+					<small class="text-zinc-500">即表示通過</small>
+				</div>
+				
+				<div>
+					<p><span class="text-blue-400/80 font-bold">NA</span> (Not Accept):</p>
+					<small class="text-zinc-500">在多測資點的題目中若未通過所有測資點則出現 NA</small>
+				</div>
+	
+				<div>
+					<p><span class="text-blue-400/80 font-bold">WA</span> (Wrong Answer):</p>
+					<small class="text-zinc-500">表示答案錯誤，並在訊息中指出錯誤行數及正確答案</small>
+				</div>
+	
+				<div>
+					<p><span class="text-blue-400/80 font-bold">TLE</span> (Time Limit Exceed):</p>
+					<small class="text-zinc-500">表示執行超過時間限制</small>
+				</div>
+	
+				<div>
+					<p><span class="text-blue-400/80 font-bold">MLE</span> (Memory Limit Exceed):</p>
+					<small class="text-zinc-500">表示程序執行超過記憶體限制</small>
+				</div>
+	
+				<div>
+					<p><span class="text-blue-400/80 font-bold">OLE</span> (Output Limit Exceed):</p>
+					<small class="text-zinc-500">表示程序輸出檔超過限制</small>
+				</div>
+	
+				<div>
+					<p><span class="text-blue-400/80 font-bold">RE</span> (Runtime Error):</p>
+					<small class="text-zinc-500">表示執行時錯誤，通常為記憶體配置錯誤 如：使用了超過陣列大小的位置</small>
+				</div>
+	
+				<div>
+					<p><span class="text-blue-400/80 font-bold">RF</span> (Restricted Function):<br></p>
+					<small class="text-zinc-500">表示使用了被禁止使用的函式，並在錯誤訊息中指明使用了什麼不合法的函式</small>
+				</div>
+	
+				<div>
+					<p><span class="text-blue-400/80 font-bold">CE</span> (Compile Error):</p>
+					<small class="text-zinc-500">表示編譯錯誤，並在訊息中列出完整錯誤訊息，以利判斷</small>
+				</div>
+			
+				<div>
+					<p><span class="text-blue-400/80 font-bold">SE</span> (System Error):</p>
+					<small class="text-zinc-500">包含 Compile, Runtime 等未定義錯誤均屬於 System Error</small>
+				</div>
+			</div>
+			
+			<p class="text-zinc-400 mt-10">另外，有些題目記憶體限制不足以啟動程式時 會標示成 RE</p>
+
+			<h2 class="text-3xl px-2 text-zinc-200 mt-16"># 常見問題</h2>
+			<hr class="scale-x-110 text-zinc-700 my-4">
+
+			<h3 class="text-2xl px-2 text-zinc-300 mt-10"><i class="fa-solid fa-q"></i> 為甚麼送出解答按鈕不見了</h3>
+			<p class="text-zinc-400/90 mt-2 mx-4">檢查登入狀態，確保你有登入</p>
+
+			<h3 class="text-2xl px-2 text-zinc-300 mt-10"><i class="fa-solid fa-q"></i> 為甚麼沒辦法看題解：<span class="text-xl">您(user)的權限(/ShowThread) 暫時取消</span></h3>
+			<p class="text-zinc-400/90 mt-2 mx-4">你可能在競賽中，點擊右上角你的頭像，如果你在競賽中，最下方會顯示「返回已加入的競賽」，確保你已經退出所有競賽</p>
+
+			<h3 class="text-2xl px-2 text-zinc-300 mt-10"><i class="fa-solid fa-q"></i> 為甚麼 ZeroJudge 載不出來</h3>
+			<p class="text-zinc-400/90 mt-2 mx-4">ZeroJudge 炸了，等一下就好了</p>
+
+		</div>
 	</div>
 </Layout>
