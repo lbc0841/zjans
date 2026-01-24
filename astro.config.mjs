@@ -17,6 +17,6 @@ export default defineConfig({
     rehypePlugins: [rehypeKatex],
   },
 
-  site: 'https://lbc0841.github.io/zjans',
+  site: 'https://lbc0841.github.io/',
   base: '/zjans', 
 });
