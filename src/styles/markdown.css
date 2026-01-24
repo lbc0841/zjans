@@ -43,10 +43,7 @@ pre {
     position: relative;
     width: auto;
 
-    margin-top: 0.6rem;
-    margin-bottom: 2rem;
-    margin-left: 0.6rem;
-    margin-right: 0.6rem;
+    margin: 0.6rem;
     padding-bottom: 0.2rem;
 
     border: solid 1px #505050;
@@ -195,7 +192,7 @@ details[open] summary {
     position: absolute;
     top: 2.4rem;
     left: 0;
-    height: calc(100% - 80px);
+    height: 100%;
     width: 100%;
     border-left: solid 2px gainsboro;
     pointer-events: none;
@@ -234,7 +231,7 @@ details[open] summary {
     position: absolute;
     top: 2.4rem;
     left: 0;
-    height: calc(100% - 80px);
+    height: 100%;
     width: 100%;
     border-left: solid 2px orange;
     pointer-events: none;
@@ -273,7 +270,7 @@ details[open] summary {
     position: absolute;
     top: 2.4rem;
     left: 0;
-    height: calc(100% - 80px);
+    height: 100%;
     width: 100%;
     border-left: solid 2px #0078d7;
     pointer-events: none;

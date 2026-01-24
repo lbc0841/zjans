@@ -690,21 +690,5 @@
         {"number": "e356"}, {"number": "e373"}, {"number": "e379"}, {"number": "e406"}, {"number": "e407"},
         {"number": "e408"}, {"number": "e409"}, {"number": "e437"}, {"number": "e450"}, {"number": "e455"},
         {"number": "e466"}, {"number": "e473"}, {"number": "e495"}, {"number": "e570"}
-    ],
-
-    
-    "gcd":
-    [
-        {"number": "a024"},
-        {"number": "a738"}
-    ],
-    "math":
-    [
-        {"number": "b593"},
-        {"number": "b603"}
-    ],
-    "dp":
-    [
-        {"number": "b595"}
     ]
 }

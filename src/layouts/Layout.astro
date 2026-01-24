@@ -12,6 +12,9 @@ const baseUrl = import.meta.env.BASE_URL;
 		<meta name="viewport" content="width=device-width" />
 		<meta name="theme-color" content={themeColor}>
 
+		<!-- sitemap -->
+		<link rel="sitemap" href="/sitemap-index.xml" />
+
 		<!-- favicon -->
 		<link rel="canonical" href="https://lbc0841.github.io//zjans/">
 		<link rel="icon" type="image/svg+xml" href={`${baseUrl}/favicon.svg`} />
@@ -30,7 +33,7 @@ const baseUrl = import.meta.env.BASE_URL;
 
 		
 		<meta name="generator" content={Astro.generator} />
-		<meta name="description" content="ZeroJudge 題解">
+		<meta name="description" content="ZJANS 是一個專門放置 ZeroJudge 題解的網頁，提供 C++ 的參考答案與解題思路，目前僅收錄 150+ 題解，未來將持續更新。">
         <meta name="keywords" content="
 			zerojudge 題解, zj 題解, zerojudge 題解 c++, zj 題解 c++, 
 			zerojudge 題解 cpp, zerojudge 解答,

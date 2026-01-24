@@ -6,6 +6,8 @@ import rehypeKatex from 'rehype-katex';
 
 import tailwindcss from '@tailwindcss/vite';
 
+import sitemap from '@astrojs/sitemap';
+
 // https://astro.build/config
 export default defineConfig({
   vite: {
@@ -17,6 +19,7 @@ export default defineConfig({
     rehypePlugins: [rehypeKatex],
   },
 
-  site: 'https://lbc0841.github.io/',
-  base: '/zjans', 
+  site: 'https://lbc0841.github.io',
+  base: '/zjans',
+  integrations: [sitemap()],
 });

@@ -82,11 +82,11 @@ body {
 }
 
 ::-webkit-scrollbar-track {
-    margin: 10px;
+    margin: 12px;
 }
 
 ::-webkit-scrollbar-thumb {
-    background-color: white;
+    background-color: #404040;
     opacity: 0.1;
     border-radius: 20px;
     transition: all 0.2s;

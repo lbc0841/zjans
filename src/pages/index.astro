@@ -18,7 +18,7 @@ import Layout from '../layouts/Layout.astro';
 		</div>
 		
 		<div class="w-full pb-32 pt-8 bg-linear-to-b from-black/0 to-black flex justify-center">
-			<span class="fa-solid fa-angle-down text-zinc-600"></span>
+			<span class="fa-solid fa-angle-down text-zinc-600 animate-bounce"></span>
 		</div>
 
 		<div class="w-full bg-black pb-16">
@@ -33,9 +33,9 @@ import Layout from '../layouts/Layout.astro';
 				</ul>
 				<br>
 
-				<p>以下是建議的 C++ 模板</p>
+				<p>另外，以下是建議的 C++ 模板</p>
 				<small class="text-zinc-600">ZJANS 題解多數參考代碼都將使用這個模板</small>
-				<div class="rounded-sm text-zinc-200 border-zinc-600/50 bg-zinc-950 border-2 p-2 mt-2 opacity-80 hover:opacity-100 duration-200">
+				<div class="rounded-sm text-zinc-200 border-zinc-600/50 bg-zinc-950 border-2 p-2 mt-2 opacity-75 hover:opacity-100 duration-200">
 					<p><span class="text-[#c586c0]">{"#include"}</span><span class="text-[#ce9178]">{"<bits/stdc++.h>"}</span></p>
 					<p><span class="text-[#c586c0]">{"#define "}</span><span class="text-[#569cd6]">{"int long long"}</span></p>
 					<p><span class="text-[#c586c0]">{"using "}</span><span class="text-[#569cd6]">{"namespace "}</span><span class="text-[#4ec9b0]">{"std"}</span>{";"}</p>
@@ -52,24 +52,24 @@ import Layout from '../layouts/Layout.astro';
 				<h2 class="text-4xl px-2 text-zinc-200 mt-20"># 特色</h2>
 				<hr class="scale-x-110 text-zinc-700 my-4">
 
-				<h3 class="text-2xl text-blue-100 mt-8">一題多解</h3>
+				<h3 class="text-2xl text-blue-200/90 mt-8">一題多解</h3>
 				<small class="block text-zinc-500 mb-4" style="line-height: 20px">ZJANS 提供多種解法，並提供參考評分結果</small>
 
-				<div class="rounded-sm text-zinc-200 border-zinc-600/50 bg-zinc-950 border-2 p-2 mt-2 opacity-80 hover:opacity-100 duration-200">
+				<div class="rounded-sm text-zinc-200 border-zinc-600/50 bg-zinc-950 border-2 p-2 mt-2 opacity-75 hover:opacity-100 duration-200">
 					<p><span class="text-[#c586c0]">{"#include"}</span><span class="text-[#ce9178]">{"<bits/stdc++.h>"}</span></p>
 					<p><span class="text-[#569cd6]">{"int "}</span><span class="text-[#dcdcaa]">{"main"}</span><span class="text-[#ffd700]">{"() {"}</span></p>
 					<p>&nbsp;&nbsp;&nbsp;&nbsp;{"std::cout <<"}<span class="text-[#ce9178]">{" \"Hello, World!\" "}</span>{";"}</p>
 					<p><span class="text-[#ffd700]">{"}"}</span></p>
 				</div>
 
-				<div class="rounded-sm text-zinc-200 border-zinc-600/50 bg-zinc-950 border-2 p-2 mt-2 opacity-80 hover:opacity-100 duration-200">
+				<div class="rounded-sm text-zinc-200 border-zinc-600/50 bg-zinc-950 border-2 p-2 mt-2 opacity-75 hover:opacity-100 duration-200">
 					<p><span class="text-[#c586c0]">{"#include"}</span><span class="text-[#ce9178]">{"<bits/stdc++.h>"}</span></p>
 					<p><span class="text-[#569cd6]">{"int "}</span><span class="text-[#dcdcaa]">{"main"}</span><span class="text-[#ffd700]">{"() {"}</span></p>
 					<p>&nbsp;&nbsp;&nbsp;&nbsp;<span class="text-[#dcdcaa]">{"printf"}</span><span class="text-[#da70d6]">{"("}</span><span class="text-[#ce9178]">{" \"Hello, World!\" "}</span><span class="text-[#da70d6]">{")"}</span>{";"}</p>
 					<p><span class="text-[#ffd700]">{"}"}</span></p>
 				</div>
 
-				<h3 class="text-2xl text-blue-100 mt-12">題目中譯中</h3>
+				<h3 class="text-2xl text-blue-200/90 mt-12">題目中譯中</h3>
 				<small class="block text-zinc-500" style="line-height: 20px">ZeroJudge 有些題目很長或不易讀懂</small>
 				<small class="block text-zinc-500 mb-4" style="line-height: 20px">ZJANS 提供題目簡述</small>
 
@@ -96,7 +96,7 @@ import Layout from '../layouts/Layout.astro';
 					</div>
 				</div>
 
-				<h3 class="text-2xl text-blue-100 mt-12">難度劃分</h3>
+				<h3 class="text-2xl text-blue-200/90 mt-12">難度劃分</h3>
 				<small class="block text-zinc-500" style="line-height: 20px">ZeroJudge 沒有提供難度參考指標，ZJANS 將劃分難度作為參考</small>
 				<small class="block text-zinc-500 mb-4" style="line-height: 20px">以下是劃分依據（會依實際情況與通過率做調整）</small>
 
@@ -136,16 +136,16 @@ import Layout from '../layouts/Layout.astro';
 				<p><span class="fa-regular fa-envelope"></span> cracker04012008@gmail.com</p><br>
 
 				<p>或者加入我的 <a class="text-blue-400 opacity-70 hover:opacity-100" href="">Discord 伺服器</a></p>
-				<p>@Icrack 召喚我過去</p>
+				<p><span class="rounded-sm bg-[#282740] text-[#94a8ff] p-0.5">@Icrack</span> 召喚我過去</p>
 			</div>
 		</div>
 		
-		<div class="px-[10dvw] py-16 bg-zinc-900/20">
+		<div class="px-[10dvw] py-16 bg-[#0c0c0c]">
 			<div class="max-w-100 mx-auto">
-				<h2 class="text-3xl px-2 text-center text-zinc-200">閱讀完了？ 去其他地方看看</h2>
+				<h2 class="text-2xl md:text-3xl px-2 text-center text-zinc-200">閱讀完了？ 去其他地方看看</h2>
 				<hr class="scale-x-110 text-zinc-700 my-4">
-				<a class="text-blue-400 opacity-70 hover:opacity-100" href="">Guide</a><span class="text-zinc-500"> - ZeroJudge 食用教學</span><br>
-				<a class="text-blue-400 opacity-70 hover:opacity-100" href="">Answers</a><span class="text-zinc-500"> - ZeroJudge 題解</span>
+				<a class="text-blue-400 opacity-70 hover:opacity-100" href="/zjans/guide">ZJ Guide</a><span class="text-zinc-500"> - ZeroJudge 食用教學</span><br>
+				<a class="text-blue-400 opacity-70 hover:opacity-100" href="/zjans/answers">Answers</a><span class="text-zinc-500"> - ZeroJudge 題解</span>
 			</div>
 		</div>
 	</div>
