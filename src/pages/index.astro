@@ -1,11 +1,148 @@
 ---
-import Welcome from '../components/Welcome.astro';
+import MainNavigation from '../components/MainNavigation.astro';
 import Layout from '../layouts/Layout.astro';
-
-// Welcome to Astro! Wondering what to do next? Check out the Astro documentation at https://docs.astro.build
-// Don't want to use any of this? Delete everything in this file, the `assets`, `components`, and `layouts` directories, and start fresh.
 ---
 
 <Layout>
-	<Welcome />
+	<MainNavigation />
+
+	<div class="w-full h-full pt-12 overflow-y-auto overflow-x-hidden">
+		<h1 class="font-share-tech-mono font-bold text-8xl text-center mt-[24dvh] xs:mt-[20dvh] w- scale-x-120">ZJANS</h1>
+		<span class="block mx-[24dvw] p-2 border-t-2 border-zinc-800"></span>
+		<span class="block text-center mb-8 text-zinc-400">&lt; &nbsp;&nbsp; ZeroJudge 參考答案 & 題解站 &nbsp;&nbsp; /&gt;</span>
+
+		<div class="w-full flex justify-center gap-8 mb-[20dvh]">
+			<a class="block py-4 px-[8dvw] rounded-md border-2 hover:bg-white hover:text-black duration-200" href="/zjans/guide">ZJ 使用指南</a>
+			<a class="block py-4 px-[8dvw] rounded-md border-2 hover:bg-white hover:text-black duration-200" href="/zjans/answers">閱讀題解 <i class="fa-solid fa-arrow-right"></i></a>
+		</div>
+		
+		<div class="w-full pb-32 pt-8 bg-linear-to-b from-[#080808] to-black flex justify-center">
+			<span class="fa-solid fa-angle-down text-zinc-700"></span>
+		</div>
+
+		<div class="w-full bg-black pb-10">
+			<div class="max-w-180 mx-auto px-8 text-zinc-400">
+				<!-- ZJANS -->
+				<h2 class="text-4xl px-2 text-zinc-200"># ZJANS 題解</h2>
+				<hr class="scale-x-110 text-zinc-700 my-4">
+				<p>- ZJANS 題解以 C++ 為主，目前多數題目只有參考代碼，未來將持續更新（努力撰寫中）</p>
+				<p>- 請思考後再使用題解，避免直接複製程式碼到 ZeroJudge，建議理解後自己實做</p>
+				<br>
+
+				<p>以下是建議的 C++ 模板</p>
+				<small class="text-zinc-600">ZJANS 題解多數參考代碼都將使用這個模板</small>
+				<div class="rounded-sm text-zinc-200 border-zinc-600/50 bg-zinc-950 border-2 p-2 mt-2 opacity-80 hover:opacity-100 duration-200">
+					<p><span class="text-[#c586c0]">{"#include"}</span><span class="text-[#ce9178]">{"<bits/stdc++.h>"}</span></p>
+					<p><span class="text-[#c586c0]">{"#define "}</span><span class="text-[#569cd6]">{"int long long"}</span></p>
+					<p><span class="text-[#c586c0]">{"#using "}</span><span class="text-[#569cd6]">{"namespace "}</span><span class="text-[#4ec9b0]">{"std"}</span>{";"}</p>
+					<br>
+					<p><span class="text-[#569cd6]">{"signed "}</span><span class="text-[#dcdcaa]">{"main"}</span><span class="text-[#ffd700]">{"() {"}</span></p>
+					<p>&nbsp;&nbsp;&nbsp;&nbsp;<span class="text-[#4ec9b0]">{"ios"}</span>{"::"}<span class="text-[#dcdcaa]">{"sync_with_stdio"}</span><span class="text-[#da70d6]">{"("}</span><span class="text-[#569cd6]">{" false "}</span><span class="text-[#da70d6]">{")"}</span>{";"}</p>
+					<p>&nbsp;&nbsp;&nbsp;&nbsp;<span class="text-[#9cdcfe]">{"cin"}</span>{"."}<span class="text-[#dcdcaa]">{"tie"}</span><span class="text-[#da70d6]">{"("}</span><span class="text-[#569cd6]">{" nullptr "}</span><span class="text-[#da70d6]">{")"}</span>{";"}</p>
+					<br>
+					<p>&nbsp;&nbsp;&nbsp;&nbsp;<span class="text-[#c586c0]">{"return "}</span><span class="text-[#b5cea8]">{"0"}</span>{";"}</p>
+					<p><span class="text-[#ffd700]">{"}"}</span></p>
+				</div>
+
+				<!-- Feature -->
+				<h2 class="text-4xl px-2 text-zinc-200 mt-20"># 特色</h2>
+				<hr class="scale-x-110 text-zinc-700 my-4">
+
+				<h3 class="text-2xl text-blue-100 mt-12">一題多解</h3>
+				<small class="block text-zinc-500 mb-4" style="line-height: 20px">ZJANS 提供多種解法，並提供參考評分結果</small>
+
+				<div class="rounded-sm text-zinc-200 border-zinc-600/50 bg-zinc-950 border-2 p-2 mt-2 opacity-80 hover:opacity-100 duration-200">
+					<p><span class="text-[#c586c0]">{"#include"}</span><span class="text-[#ce9178]">{"<bits/stdc++.h>"}</span></p>
+					<p><span class="text-[#569cd6]">{"int "}</span><span class="text-[#dcdcaa]">{"main"}</span><span class="text-[#ffd700]">{"() {"}</span></p>
+					<p>&nbsp;&nbsp;&nbsp;&nbsp;{"std::cout <<"}<span class="text-[#ce9178]">{" \"Hello, World!\" "}</span>{";"}</p>
+					<p><span class="text-[#ffd700]">{"}"}</span></p>
+				</div>
+
+				<div class="rounded-sm text-zinc-200 border-zinc-600/50 bg-zinc-950 border-2 p-2 mt-2 opacity-80 hover:opacity-100 duration-200">
+					<p><span class="text-[#c586c0]">{"#include"}</span><span class="text-[#ce9178]">{"<bits/stdc++.h>"}</span></p>
+					<p><span class="text-[#569cd6]">{"int "}</span><span class="text-[#dcdcaa]">{"main"}</span><span class="text-[#ffd700]">{"() {"}</span></p>
+					<p>&nbsp;&nbsp;&nbsp;&nbsp;<span class="text-[#dcdcaa]">{"printf"}</span><span class="text-[#da70d6]">{"("}</span><span class="text-[#ce9178]">{" \"Hello, World!\" "}</span><span class="text-[#da70d6]">{")"}</span>{";"}</p>
+					<p><span class="text-[#ffd700]">{"}"}</span></p>
+				</div>
+
+				<h3 class="text-2xl text-blue-100 mt-12">題目中譯中</h3>
+				<small class="block text-zinc-500" style="line-height: 20px">ZeroJudge 有些題目很長或不易讀懂</small>
+				<small class="block text-zinc-500 mb-4" style="line-height: 20px">ZJANS 提供題目簡述</small>
+
+				<div class="flex w-full gap-2">
+					<p class="mx-4 grow">中文</p>
+					<p class="my-auto fa-solid fa-right-left"></p>
+					<p class="mx-4 grow">中文</p>
+				</div>
+
+				<div class="grid grid-cols-2 w-full gap-2">
+					<div class="w-full h-full rounded-lg border-zinc-800 border-2 p-2 hover:border-blue-400/50 duration-200">
+						<p class="text-sm">
+							學習所有程式語言的第一個練習題<br>
+							請寫一個程式，可以讀入指定的字串，並且輸出指定的字串。<br>
+							<br>
+							比如：輸入字串 "world"，則請輸出 "hello, world"
+						</p>
+					</div>
+
+					<div class="w-full h-full rounded-lg border-zinc-900 bg-zinc-950 border-2 p-2 hover:border-blue-400/50 duration-200">
+						<p class="text-sm">
+							輸入字串 s，輸出 "hello, " + s
+						</p>
+					</div>
+				</div>
+
+				<h3 class="text-2xl text-blue-100 mt-12">難度劃分</h3>
+				<small class="block text-zinc-500" style="line-height: 20px">ZeroJudge 沒有提供難度參考指標，ZJANS 將劃分難度作為參考</small>
+				<small class="block text-zinc-500 mb-4" style="line-height: 20px">以下是劃分依據（會依實際情況與通過率做調整）</small>
+
+				<div class="rounded-lg border-green-500/30 hover:border-green-500 duration-200 border-2 pt-2 pb-4 px-4 mt-2">
+					<p class="text-zinc-300 font-bold">- Beginner</p>
+					<p class="text-md/[1px]">基本語法，基本輸入輸出</p>
+					<small class="block text-zinc-600" style="line-height: 12px">if, else, for, while...</small>
+				</div>
+				
+				<div class="rounded-lg border-yellow-500/30 hover:border-yellow-500 duration-200 border-2 pt-2 pb-4 px-4 mt-2">
+					<p class="text-zinc-300 font-bold">- Easy</p>
+					<p class="text-md/[1px]">基礎資料結構，輸入處理，簡單的數學</p>
+					<small class="block text-zinc-600" style="line-height: 12px">堆疊, 隊列, stringstream, 等差數列...</small>
+				</div>
+
+				<div class="rounded-lg border-orange-500/30 hover:border-orange-500 duration-200 border-2 pt-2 pb-4 px-4 mt-2">
+					<p class="text-zinc-300 font-bold">- Medium</p>
+					<p class="text-md/[1px]">初階演算法，基礎圖論</p>
+					<small class="block text-zinc-600" style="line-height: 12px">DFS, BFS, 前綴和, 二分搜索...</small>
+				</div>
+
+				<div class="rounded-lg border-red-500/30 hover:border-red-500 duration-200 border-2 pt-2 pb-4 px-4 mt-2">
+					<p class="text-zinc-300 font-bold">- Hard</p>
+					<p class="text-md/[1px]">進階演算法，燒腦數學</p>
+					<small class="block text-zinc-600" style="line-height: 12px">線段樹, Dijkstra, DP...</small>
+				</div>
+
+				<!-- Problems -->
+				<h2 class="text-4xl px-2 text-zinc-200 mt-20"># 問題回報</h2>
+				<hr class="scale-x-110 text-zinc-700 my-4">
+
+				<p>如果你有意願成為題解的貢獻者</p>
+				<p>或者題解有任何問題</p>
+				<small class="text-zinc-600">如：rejudge 後題解不通過、題解敘述有誤</small><br>
+				<br>
+				<p>請聯絡</p>
+				<p><span class="fa-regular fa-envelope"></span> cracker04012008@gmail.com</p><br>
+
+				<p>或者加入我的 <a class="text-blue-400 opacity-70 hover:opacity-100" href="">Discord 伺服器</a></p>
+				<p>@Icrack 召喚我過去</p>
+			</div>
+		</div>
+		
+		<div class="px-[10dvw] py-20 bg-zinc-950/80">
+			<div class="max-w-100 mx-auto">
+				<h2 class="text-3xl px-2 text-center text-zinc-200">閱讀完了？ 去其他地方看看</h2>
+				<hr class="scale-x-110 text-zinc-700 my-4">
+				<a class="text-blue-400 opacity-70 hover:opacity-100" href="">Guide</a><span class="text-zinc-500"> - ZeroJudge 食用教學</span><br>
+				<a class="text-blue-400 opacity-70 hover:opacity-100" href="">Answers</a><span class="text-zinc-500"> - ZeroJudge 題解</span>
+			</div>
+		</div>
+	</div>
 </Layout>

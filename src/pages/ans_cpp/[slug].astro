@@ -1,0 +1,46 @@
+---
+import AnsLayout from '../../layouts/AnsLayout.astro';
+import MainNavigation from '../../components/MainNavigation.astro';
+
+import { getCollection } from 'astro:content';
+import { render } from 'astro:content';
+
+export async function getStaticPaths() {
+    const allPosts = await getCollection('ans_cpp');
+    return allPosts.map(post => {
+        const slug = post.id.replace(/\.mdx?$/, '');
+    
+        return {
+            params: { 
+                slug: slug
+            },
+            props: { 
+                post 
+            }
+        }
+    });
+}
+
+const { post } = Astro.props;
+const { Content } = await render(post);
+---
+
+<AnsLayout>
+    <MainNavigation/>
+    <div class="h-full w-full p-2 overflow-y-auto overflow-x-hidden">
+        <div class="max-w-250 mx-auto pb-10">
+            <h1 class="mx-4 mt-16">{post.data.title}</h1>
+            <small class="block mx-4 mb-4 text-zinc-500">{post.data.date}</small>
+            <div class="mx-4 mb-8 flex gap-2">
+                {
+                    (post.data.tags ? post.data.tags : []).map(tag => (
+                        <span class="text-xs rounded-2xl bg-blue-900 px-3 py-2">{tag}</span>
+                    ))
+                }
+            </div>
+            
+            <Content />
+        </div>
+    </div>
+
+</AnsLayout>

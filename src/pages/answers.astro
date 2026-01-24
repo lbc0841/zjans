@@ -1,0 +1,75 @@
+---
+import MainNavigation from '../components/MainNavigation.astro';
+import Layout from '../layouts/Layout.astro';
+
+
+import zj_question from "../data/zj_question.json";
+
+import { getCollection } from 'astro:content';
+const allAns = await getCollection('ans_cpp');
+const ansSet = new Set(allAns.map(entry => entry.slug));
+---
+
+<Layout>
+	<MainNavigation />
+
+	<div class="w-full h-full pt-12 pb-2">
+		<div class="w-full h-full absolute pointer-events-none" style="box-shadow: inset 0 22px 16px #080808;"></div>
+
+		<div class="w-full h-full px-6 justify-center items-center overflow-y-auto text-zinc-300">
+
+            <span class="block mt-6 text-zinc-400"><span class="text-zinc-300">a001</span> &nbsp;表示有題解</span>
+            <span class="block text-zinc-400"><span class="text-red-600">a001</span> &nbsp;表示題解還未完成</span>
+
+            <hr class="my-8 text-zinc-600">
+			<h2 class="text-xl text-zinc-400 mb-4 mt-4"># 基礎題庫 <small class="text-sm ml-2">( {zj_question.basic.length} )</small></h2>
+			{
+				zj_question.basic.map(q => {
+					const hasPage = ansSet.has(q.number.toString());
+					const color = hasPage ? "text-zinc-300" : "text-red-600";
+					return(<a class={`inline-block w-12 text-center hover:text-blue-400 ${color}`} href={`/zjans/ans_cpp/${q.number}`}>{q.number}</a>)
+				})
+			}
+
+			<hr class="my-8 text-zinc-600">
+			<h2 class="text-xl text-zinc-400 mb-4"># 競賽題庫 <small class="text-sm ml-2">( {zj_question.contest.length} )</small></h2>
+			{
+				zj_question.contest.map(q => {
+					const hasPage = ansSet.has(q.number.toString());
+					const color = hasPage ? "text-zinc-300" : "text-red-600";
+					return(<a class={`inline-block w-12 text-center hover:text-blue-400 ${color}`} href={`/zjans/ans_cpp/${q.number}`}>{q.number}</a>)
+				})
+			}
+
+			<hr class="my-8 text-zinc-600">
+			<h2 class="text-xl text-zinc-400 mb-4"># IOI/APCS <small class="text-sm ml-2">( {zj_question.ioi_apcs.length} )</small></h2>
+			{
+				zj_question.ioi_apcs.map(q => {
+					const hasPage = ansSet.has(q.number.toString());
+					const color = hasPage ? "text-zinc-300" : "text-red-600";
+					return(<a class={`inline-block w-12 text-center hover:text-blue-400 ${color}`} href={`/zjans/ans_cpp/${q.number}`}>{q.number}</a>)
+				})
+			}
+
+			<hr class="my-8 text-zinc-600">
+			<h2 class="text-xl text-zinc-400 mb-4"># UVa 題庫 <small class="text-sm ml-2">( {zj_question.uva.length} )</small></h2>
+			{
+				zj_question.uva.map(q => {
+					const hasPage = ansSet.has(q.number.toString());
+					const color = hasPage ? "text-zinc-300" : "text-red-600";
+					return(<a class={`inline-block w-12 text-center hover:text-blue-400 ${color}`} href={`/zjans/ans_cpp/${q.number}`}>{q.number}</a>)
+				})
+			}
+
+			<hr class="my-8 text-zinc-600">
+			<h2 class="text-xl text-zinc-400 mb-4"># 原創/不分類題庫 <small class="text-sm ml-2">( {zj_question.uncategorized.length} )</small></h2>
+			{
+				zj_question.uncategorized.map(q => {
+					const hasPage = ansSet.has(q.number.toString());
+					const color = hasPage ? "text-zinc-300" : "text-red-600";
+					return(<a class={`inline-block w-12 text-center hover:text-blue-400 ${color}`} href={`/zjans/ans_cpp/${q.number}`}>{q.number}</a>)
+				})
+			}
+		</div>
+	</div>
+</Layout>

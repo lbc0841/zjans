@@ -1,0 +1,47 @@
+green
+<font color="#00bb00"></font>
+
+orange
+<font color="#ff7000"></font>
+
+blue
+<font color="#51a2ff"></font>
+
+red
+<font color="#ff2020">※ </font>
+
+---
+
+<details class="eg" close>
+<summary></summary>
+
+</details>
+
+<details class="eg_math" close>
+<summary></summary>
+
+</details>
+
+🔹
+🔸
+✅
+
+基礎 IO
+基本運算
+排序
+數學
+IO 優化
+DP
+二分搜
+陣列
+DFS
+BFS
+大數
+浮點誤差
+迴文
+GCD
+堆疊
+雙指針
+後綴和
+前綴和
+q027
