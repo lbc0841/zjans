@@ -4,8 +4,9 @@ const ansCppCollection = defineCollection({
     type: "content",
     schema: z.object({
         title: z.string(),
-        date: z.date(),
+        date: z.coerce.date(),
         tags: z.array(z.string()).optional(),
+        difficulty: z.number(),
     }),
 });
 

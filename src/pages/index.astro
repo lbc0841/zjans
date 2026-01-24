@@ -9,7 +9,7 @@ import Layout from '../layouts/Layout.astro';
 
 	<div class="w-full h-full pt-12 overflow-y-auto overflow-x-hidden">
 		<h1 class="font-share-tech-mono font-bold text-8xl text-center mt-[24dvh] xs:mt-[20dvh] w- scale-x-120">ZJANS</h1>
-		<span class="block mx-[24dvw] p-2 border-t-2 border-zinc-800"></span>
+		<span class="block mx-[24dvw] p-2 border-t-2 border-zinc-600/90"></span>
 		<span class="block text-center mb-8 text-zinc-400">&lt; &nbsp;&nbsp; ZeroJudge 參考答案 & 題解站 &nbsp;&nbsp; /&gt;</span>
 
 		<div class="w-full flex justify-center gap-8 mb-[20dvh]">
@@ -22,12 +22,15 @@ import Layout from '../layouts/Layout.astro';
 		</div>
 
 		<div class="w-full bg-black pb-16">
-			<div class="max-w-180 mx-auto px-8 text-zinc-400">
+			<div class="max-w-200 mx-auto px-8 text-zinc-400">
 				<!-- ZJANS -->
 				<h2 class="text-4xl px-2 text-zinc-200"># ZJANS 題解</h2>
 				<hr class="scale-x-110 text-zinc-700 my-4">
-				<p>- ZJANS 題解以 C++ 為主，目前多數題目只有參考代碼，未來將持續更新（努力撰寫中）</p>
-				<p>- 請思考後再使用題解，避免直接複製程式碼到 ZeroJudge，建議理解後自己實做</p>
+
+				<ul>
+					<li class="list-disc ml-2">ZJANS 題解以 C++ 為主，目前多數題目只有參考代碼，未來將持續更新（努力撰寫中）</li>
+					<li class="list-disc ml-2">請思考後再使用題解，避免直接複製程式碼到 ZeroJudge，建議理解後自己實做</li>
+				</ul>
 				<br>
 
 				<p>以下是建議的 C++ 模板</p>
@@ -49,7 +52,7 @@ import Layout from '../layouts/Layout.astro';
 				<h2 class="text-4xl px-2 text-zinc-200 mt-20"># 特色</h2>
 				<hr class="scale-x-110 text-zinc-700 my-4">
 
-				<h3 class="text-2xl text-blue-100 mt-12">一題多解</h3>
+				<h3 class="text-2xl text-blue-100 mt-8">一題多解</h3>
 				<small class="block text-zinc-500 mb-4" style="line-height: 20px">ZJANS 提供多種解法，並提供參考評分結果</small>
 
 				<div class="rounded-sm text-zinc-200 border-zinc-600/50 bg-zinc-950 border-2 p-2 mt-2 opacity-80 hover:opacity-100 duration-200">
