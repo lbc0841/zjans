@@ -319,3 +319,8 @@ img {
     max-width: 500px;
     border-radius: 10px;
 }
+
+.katex-display {
+    max-width: fit-content;
+    margin-left: 1.2rem;
+}
