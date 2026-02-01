@@ -19,23 +19,66 @@ const difficultyColor = [
 	<MainNavigation />
 	<div class="background-grid"></div>
 
-    <!-- <div class="absolute bottom-6 left-[50%] translate-x-[-50%] px-6 py-3 w-[90%] sm:w-[60%] bg-[#141414] border border-[#474747] rounded-4xl z-100" style="box-shadow: 0 2px 20px rgba(0, 0, 0, 0.1);">
-        <span>難度</span>
-        <span>標籤</span>
-    </div> -->
+    <div class="flex flex-col justify-center content-center absolute bottom-6 right-6 w-16 h-16 bg-[#141414] border border-[#606060] text-[#606060] rounded-xl z-100" style="box-shadow: 0 2px 20px rgba(0, 0, 0, 0.1);">
+        <!-- <span>難度</span>
+        <span>標籤</span> -->
+        <p class="fa-solid fa-filter text-center text-2xl"></p>
+
+    </div>
 
 	<div class="w-full h-full pt-14 overflow-y-auto overflow-x-hidden">
-		<div class="mx-auto max-w-260 px-8 text-zinc-300 pb-16">
+		<div class="mx-auto max-w-250 px-8 text-zinc-300 pb-16">
             {
-                allAns.map(ans => (
-                    <div class="w-full h-12 flex gap-4 justify-between opacity-70 hover:opacity-100 hover:scale-101 duration-200"
-                        onclick={`location.href="/zjans/ans_cpp/${ans.data.title.substring(0, 4)}"`}>
+                allAns.map(ans => {
+                    if(ans.data.difficulty == 0) return (
+                        <div class="w-full h-12 flex gap-4 justify-between opacity-70 hover:opacity-100 hover:scale-101 duration-200"
+                            onclick={`location.href="/zjans/ans_cpp/${ans.data.title.substring(0, 4)}"`}>
 
-                        <span class="my-auto text-md md:text-lg whitespace-nowrap max-w-[70%] overflow-hidden">{ans.data.title}</span>
-                        <span class={`my-auto p-px rounded-sm border-2 opacity-70 w-20 text-center text-md ${difficultyColor[ans.data.difficulty]}`}>{difficultyText[ans.data.difficulty]}</span>
-                    </div>
-                    <hr class="text-zinc-700"/>
-                ))
+                            <span class="my-auto text-md md:text-lg whitespace-nowrap max-w-[70%] overflow-hidden">{ans.data.title}</span>
+                            <span class={`my-auto p-px rounded-sm border-2 opacity-70 w-20 text-center text-md ${difficultyColor[ans.data.difficulty]}`}>{difficultyText[ans.data.difficulty]}</span>
+                        </div>
+                        <hr class="text-zinc-700"/>
+                    )
+                })
+            }
+            {
+                allAns.map(ans => {
+                    if(ans.data.difficulty == 1) return (
+                        <div class="w-full h-12 flex gap-4 justify-between opacity-70 hover:opacity-100 hover:scale-101 duration-200"
+                            onclick={`location.href="/zjans/ans_cpp/${ans.data.title.substring(0, 4)}"`}>
+
+                            <span class="my-auto text-md md:text-lg whitespace-nowrap max-w-[70%] overflow-hidden">{ans.data.title}</span>
+                            <span class={`my-auto p-px rounded-sm border-2 opacity-70 w-20 text-center text-md ${difficultyColor[ans.data.difficulty]}`}>{difficultyText[ans.data.difficulty]}</span>
+                        </div>
+                        <hr class="text-zinc-700"/>
+                    )
+                })
+            }
+            {
+                allAns.map(ans => {
+                    if(ans.data.difficulty == 2) return (
+                        <div class="w-full h-12 flex gap-4 justify-between opacity-70 hover:opacity-100 hover:scale-101 duration-200"
+                            onclick={`location.href="/zjans/ans_cpp/${ans.data.title.substring(0, 4)}"`}>
+
+                            <span class="my-auto text-md md:text-lg whitespace-nowrap max-w-[70%] overflow-hidden">{ans.data.title}</span>
+                            <span class={`my-auto p-px rounded-sm border-2 opacity-70 w-20 text-center text-md ${difficultyColor[ans.data.difficulty]}`}>{difficultyText[ans.data.difficulty]}</span>
+                        </div>
+                        <hr class="text-zinc-700"/>
+                    )
+                })
+            }
+            {
+                allAns.map(ans => {
+                    if(ans.data.difficulty == 3) return (
+                        <div class="w-full h-12 flex gap-4 justify-between opacity-70 hover:opacity-100 hover:scale-101 duration-200"
+                            onclick={`location.href="/zjans/ans_cpp/${ans.data.title.substring(0, 4)}"`}>
+
+                            <span class="my-auto text-md md:text-lg whitespace-nowrap max-w-[70%] overflow-hidden">{ans.data.title}</span>
+                            <span class={`my-auto p-px rounded-sm border-2 opacity-70 w-20 text-center text-md ${difficultyColor[ans.data.difficulty]}`}>{difficultyText[ans.data.difficulty]}</span>
+                        </div>
+                        <hr class="text-zinc-700"/>
+                    )
+                })
             }
 		</div>
 	</div>
